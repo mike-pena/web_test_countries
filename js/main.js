@@ -11,21 +11,26 @@ async function main() {
     
     renderCountries(allCountries);
     
-    setControls();
+    setFilters();
 }
 
-function setControls() {
-    const searchInput = document.querySelector("#search")
+function setFilters() {
+    const searchInput = document.querySelector("#search");
+    const regionFilter = document.querySelector(".region-filter");
 
-    searchInput.addEventListener("input", searchByName);
+    searchInput.addEventListener("input", handleFilters);
+    regionFilter.addEventListener("change", handleFilters);
 }
 
-function searchByName() {
+function handleFilters() {
     const searchValue = document.querySelector("#search").value.toLowerCase();
+    const selectedRegion = document.querySelector(".region-filter").value;
 
     resultCountries = allCountries.filter(country => {
         const matchesName = country.name.common.toLowerCase().includes(searchValue);
-        return matchesName;
+        const matchesRegion = selectedRegion ? country.region === selectedRegion : true;
+
+        return matchesName && matchesRegion;
     });
 
     renderCountries(resultCountries);
