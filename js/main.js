@@ -1,11 +1,32 @@
-document.addEventListener("DOMContentLoaded", async () => { // why is this necessary?
-  console.log("App ready");
+let allCountries = [];
 
-  const countries = await getAllCountries();
+document.addEventListener("DOMContentLoaded", main);
 
-  countries.sort((a, b) => // how does this work??
-    a.name.common.localeCompare(b.name.common)
-  );
+async function main() {
+    allCountries = await getAllCountries();
+    
+    allCountries.sort((a, b) =>
+        a.name.common.localeCompare(b.name.common)
+    );
+    
+    renderCountries(allCountries);
+    
+    setControls();
+}
 
-  renderCountries(countries);
-});
+function setControls() {
+    const searchInput = document.querySelector("#search")
+
+    searchInput.addEventListener("input", searchByName);
+}
+
+function searchByName() {
+    const searchValue = document.querySelector("#search").value.toLowerCase();
+
+    resultCountries = allCountries.filter(country => {
+        const matchesName = country.name.common.toLowerCase().includes(searchValue);
+        return matchesName;
+    });
+
+    renderCountries(resultCountries);
+}
