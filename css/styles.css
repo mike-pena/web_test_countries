@@ -213,7 +213,7 @@ p {
 /* --------- details page --------------*/
 
 .controls-detail {
-  padding: 20px 0 70px 0;
+  padding: 20px 0;
 }
 
 .back-btn {
@@ -281,7 +281,7 @@ p {
   align-items: start;
 }
 
-.country-detail__borders-label{
+.country-detail__borders-label, .country-detail__borders-container p{
   padding-top: 5px;
 }
 
