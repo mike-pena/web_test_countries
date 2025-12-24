@@ -14,14 +14,24 @@
 </head>
 <body>
     <div class="page">
-        <header>
-            <h1>Where in the world?</h1>
-            <button class="theme-toggle">Dark Mode</button>
+        <header class="header">
+            <div class="header-wrapper">
+                <a href="index.html" class="header__home-link">
+                    <h1 class="header__title">Where in the world?</h1>
+                </a>
+                <button class="theme-toggle">
+                    <i class="fa-regular fa-moon theme-toggle__icon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
         </header>
 
-        <main>
-            <section class="controls">
-                <button class="back-btn">← Back</button>
+        <main class="content">
+            <section class="controls__back-btn">
+                <button class="back-btn">
+                    <i class="fa-solid fa-arrow-left back-btn__icon"></i>
+                    <span>Back</span>
+                </button>
             </section>
 
             <section class="country-details">
