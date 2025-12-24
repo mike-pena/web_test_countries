@@ -1,4 +1,4 @@
-const baseUrl = "https://restcountries.com/v3.1/all?fields=name,region,cca3"
+const baseUrl = "https://restcountries.com/v3.1/all?fields=name,region,cca3,population,capital,flags"
 
 async function getAllCountries() {
     try {

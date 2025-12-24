@@ -10,6 +10,8 @@ async function main() {
     );
     
     renderCountries(allCountries);
+
+    console.log(allCountries)
     
     setFilters();
 }

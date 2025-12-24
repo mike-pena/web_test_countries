@@ -10,31 +10,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a061d59ea3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="page">
-        <header>
-            <h1>Where in the world?</h1>
-            <button class="theme-toggle">Dark Mode</button>
+        <header class="header">
+            <div class="header-wrapper">
+                <h1 class="header__title">Where in the world?</h1>
+                <button class="theme-toggle">
+                    <i class="fa-regular fa-moon theme-toggle__icon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
         </header>
 
-        <main>
+        <main class="content">
             <section class="controls">
-                <form>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search__icon"></i>
                     <input class="search__input" type="text" id="search" placeholder="Search for a country..." name="search">
-                    <button type="submit"></button>
-                </form>
-                <select class="region-filter">
-                    <option value="" selected>Filter by Region</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Americas">America</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
+                </div>
+                
+                <div class="select-wrapper">
+                    <select class="region-filter">
+                        <option value="" selected>Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down select__arrow"></i>
+                </div>
             </section>
 
-            <section class="countries-container"></section>
+            <section class="countries">
+                <ul class="countries-container"></ul>
+            </section>
         </main>
     </div>
     <script src="js/theme.js"></script>
