@@ -405,7 +405,7 @@ p {
   .back-btn,
   .search__input,
   .search__input::placeholder,
-  .select,
+  .select__input,
   .border-country__btn {
     font-size: 16px;
   }
