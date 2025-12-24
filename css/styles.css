@@ -84,6 +84,7 @@ p {
 
 .search {
   display: flex;
+  align-items: center;
   background-color: var(--element-color);
   max-width: 400px;
   width: 100%;
@@ -414,6 +415,10 @@ p {
     align-items: self-start;
     gap: 40px;
     margin-bottom: 35px;
+  }
+
+  .search {
+    max-width: 100%;
   }
 
   .countries-container {
