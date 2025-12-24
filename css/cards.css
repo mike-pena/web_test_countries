@@ -1,0 +1,67 @@
+.countries__container {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 65px;
+}
+
+.card {
+  list-style: none;
+  cursor: pointer;
+  background-color: var(--element-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card__flag-wrapper {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  height: auto;
+  overflow: hidden;
+}
+
+.card__flag-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__content {
+  padding: 25px;
+  padding-bottom: 45px;
+}
+
+.card__title {
+  margin-bottom: 15px;
+  text-overflow: ellipsis;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 800;
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__detail {
+  font-weight: 300;
+}
+
+.card__detail strong {
+  font-weight: 600;
+}
+
+.empty-state-message {
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 100px 0;
+}

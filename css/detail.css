@@ -1,0 +1,95 @@
+.controls-detail {
+  padding: 20px 0;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow-btn);
+  font-family: var(--font-family);
+  border-radius: 5px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.country-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 72px;
+  padding-bottom: 100px;
+}
+
+.country-detail__flag {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 13 / 9;
+  overflow: hidden;
+}
+
+.country-detail__flag-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.country-detail__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.country-detail__name {
+  font-weight: 800;
+}
+
+.country-detail__info {
+  display: flex;
+  gap: 150px;
+}
+
+.country-detail__column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.country-detail__borders {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+  align-items: start;
+}
+
+.country-detail__borders-label, .country-detail__borders-container p{
+  padding-top: 5px;
+}
+
+.country-detail__borders-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.border-country__btn {
+  background: none;
+  border: none;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  box-shadow: var(--shadow-btn);
+  font-family: var(--font-family);
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px;
+  min-height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
