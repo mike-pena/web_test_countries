@@ -15,7 +15,7 @@ p {
 }
 
 p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .page {
@@ -395,7 +395,13 @@ p {
     font-size: 18px;
   }
 
-  .theme-toggle, .theme-toggle__icon, .back-btn, .search__input, .search__input::placeholder, .region-filter, .border-country__btn {
+  .theme-toggle,
+  .theme-toggle__icon,
+  .back-btn,
+  .search__input,
+  .search__input::placeholder,
+  .region-filter,
+  .border-country__btn {
     font-size: 16px;
   }
 
@@ -459,5 +465,10 @@ p {
   .borders p {
     font-size: 16px;
     padding: 0;
+  }
+
+  .border-country__btn {
+    width: 120px;
+    padding: 8px;
   }
 }
