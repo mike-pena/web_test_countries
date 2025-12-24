@@ -14,7 +14,7 @@
   padding-left: 30px;
   border-radius: 5px;
   box-shadow: var(--shadow);
-  gap: 10px;
+  gap: 17px;
 }
 
 .search__icon {
@@ -33,6 +33,7 @@
 .search__input::placeholder {
   font-family: var(--font-family);
   color: var(--text-color);
+  font-size: 14px;
 }
 
 .dropdown {
