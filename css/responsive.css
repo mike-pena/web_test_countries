@@ -96,7 +96,9 @@
   .search__input,
   .search__input::placeholder,
   .select__input,
-  .border-country__btn {
+  .border-country__btn,
+  .dropdown__button,
+  .dropdown__item {
     font-size: 16px;
   }
 
@@ -157,7 +159,7 @@
     gap: 10px;
   }
 
-  .country-detail__borders{
+  .country-detail__borders {
     flex-direction: column;
   }
 
@@ -169,5 +171,9 @@
   .border-country__btn {
     width: 115px;
     padding: 8px;
+  }
+
+  .dropdown {
+    width: 220px;
   }
 }

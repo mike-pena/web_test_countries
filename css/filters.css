@@ -35,33 +35,49 @@
   color: var(--text-color);
 }
 
-.select {
+.dropdown {
   position: relative;
+  width: 182px;
 }
 
-.select__input {
+.dropdown__button {
+  width: 100%;
+  height: 100%;
+  padding: 17px 20px;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
   border: none;
-  background: none;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 100%;
   background-color: var(--element-color);
   box-shadow: var(--shadow);
   border-radius: 5px;
-  padding: 17px;
-  font-family: var(--font-family);
-  width: 182px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  color: var(--text-color);
+  list-style: none;
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
 }
 
-.select__icon {
-  position: absolute;
-  top: 35%;
-  right: 17px;
-  font-size: 12px;
-  pointer-events: none;
+.dropdown.is-open .dropdown__menu {
+  display: block;
 }
 
-.select:focus {
-  outline: none;
+.dropdown__item {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 20px;
+  cursor: pointer;
 }
