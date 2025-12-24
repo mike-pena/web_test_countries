@@ -29,7 +29,7 @@ function generateCard(country) {
         <div class="card__info">
             <h3 class="card__title">${country.name.common}</h3>
             <div class="card__details">
-                <p><strong>Population:</strong> ${country.population}</p>
+                <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
                 <p><strong>Region:</strong> ${country.region}</p>
                 <p><strong>Capital:</strong> ${country.capital?.[0] || "N/A"}</p>
             </div>

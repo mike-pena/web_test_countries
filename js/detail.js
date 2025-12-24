@@ -8,8 +8,6 @@ async function showCountryDetails() {
 
   const countryData = await getCountryByCode(countryCode);
 
-  console.log(countryData[0]);
-
   renderCountryDetails(countryData[0]);
 
   setBackBtn();
@@ -40,7 +38,7 @@ function renderCountryDetails(country) {
         <div class="details_country-info_container">
           <div class="country-info_column">
             <p><strong>Native Name:</strong> ${nativeName}</p>
-            <p><strong>Population:</strong> ${country.population}</p>
+            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
             <p><strong>Region:</strong> ${country.region}</p>
             <p><strong>Sub Region:</strong> ${country.subregion || "N/A"}</p>
             <p><strong>Capital:</strong> ${country.capital?.[0] || "N/A"}</p>

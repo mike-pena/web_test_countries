@@ -2,11 +2,11 @@
     outline: red 1px solid;
 }*/
 
-body {
-  background-color: var(--bg-light);
-  margin: 0;
+.page {
+  background-color: var(--bg-color);
 }
 
+body,
 h1,
 h2,
 h3,
@@ -20,11 +20,11 @@ p {
 
 .page {
   font-family: var(--font-family);
-  color: var(--text-light);
+  color: var(--text-color);
 }
 
 .header {
-  background-color: var(--element-light);
+  background-color: var(--element-color);
   box-shadow: var(--shadow);
   padding: 20px;
 }
@@ -33,16 +33,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--content-width);
+  max-width: 1200px;
   margin: auto;
 }
 
 .header__home-link {
     text-decoration: none;
+    color: var(--text-color);
 }
 
 .header__home-link:visited {
-    color: var(--text-light);
+    color: var(--text-color);
 }
 
 .header__title {
@@ -61,6 +62,7 @@ p {
   align-items: center;
   gap: 5px;
   padding: 0;
+  color: var(--text-color);
 }
 
 .theme-toggle__icon {
@@ -69,7 +71,7 @@ p {
 }
 
 .content {
-  max-width: var(--content-width);
+  max-width: 1200px;
   margin: auto;
   padding: 50px 0 50px 0;
 }
@@ -82,7 +84,7 @@ p {
 
 .search {
   display: flex;
-  background-color: var(--element-light);
+  background-color: var(--element-color);
   width: 400px;
   padding: 17px;
   padding-left: 30px;
@@ -92,19 +94,21 @@ p {
 }
 
 .search__icon {
-  color: grey;
+  color: var(--text-color);
 }
 
 .search__input {
   background: none;
   border: none;
   font-family: var(--font-family);
+  color: var(--text-color);
   outline: none;
   width: 100%;
 }
 
 .search__input::placeholder {
   font-family: var(--font-family);
+  color: var(--text-color);
 }
 
 .select-wrapper {
@@ -114,7 +118,7 @@ p {
 .region-filter {
   border: none;
   background: none;
-  background-color: var(--element-light);
+  background-color: var(--element-color);
   box-shadow: var(--shadow);
   border-radius: 5px;
   padding: 17px;
@@ -123,6 +127,7 @@ p {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  color: var(--text-color);
 }
 
 .select__arrow {
@@ -149,7 +154,7 @@ p {
 .card {
   list-style: none;
   cursor: pointer;
-  background-color: var(--element-light);
+  background-color: var(--element-color);
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -210,7 +215,8 @@ p {
   gap: 8px;
   background: none;
   border: none;
-  background-color: var(--element-light);
+  background-color: var(--element-color);
+  color: var(--text-color);
   box-shadow: var(--shadow-btn);
   font-family: var(--font-family);
   border-radius: 5px;
@@ -281,7 +287,8 @@ p {
 .border-country__btn {
   background: none;
   border: none;
-  background-color: var(--element-light);
+  background-color: var(--element-color);
+  color: var(--text-color);
   box-shadow: var(--shadow-btn);
   font-family: var(--font-family);
   width: 100px;
@@ -292,4 +299,7 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@media screen and (max-width: 950px) {
 }

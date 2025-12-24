@@ -1,12 +1,16 @@
 :root {
-    --bg-light: hsl(0, 0%, 99%);
-    --text-light: hsl(200, 15%, 8%);
-    --element-light: hsl(0, 100%, 100%);
-    --bg-dark: hsl(207, 26%, 17%);
-    --text-dark: hsl(0, 100%, 100%);
-    --element-dark: hsl(209, 23%, 22%);
+    --bg-color: hsl(0, 0%, 99%);
+    --text-color: hsl(200, 15%, 8%);
+    --element-color: hsl(0, 100%, 100%);
     --font-family: "Nunito Sans";
-    --content-width: 1200px;
     --shadow: 0px 0px 8px 0px rgb(228, 228, 228);
     --shadow-btn: 0px 0px 5px 2px rgb(228, 228, 228);
+}
+
+.page[theme="dark"] {
+    --bg-color: hsl(207, 26%, 17%);
+    --text-color: hsl(0, 100%, 100%);
+    --element-color: hsl(209, 23%, 22%);
+    --shadow: 0px 0px 8px 0px hsl(207, 26%, 15%);
+    --shadow-btn: 0px 0px 5px 2px hsl(203, 22%, 14%);
 }
