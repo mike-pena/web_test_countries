@@ -3,6 +3,14 @@ function renderCountries(countries) {
 
   container.innerHTML = "";
 
+  if (countries.length === 0) {
+    const message = document.createElement("p");
+    message.classList.add("empty-state-message");
+    message.textContent = "No se encontraron países que coincidan con tu búsqueda.";
+    container.appendChild(message);
+    return;
+    }
+
   for (const country of countries) {
     const card = generateCard(country);
 
