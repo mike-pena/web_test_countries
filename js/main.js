@@ -1,4 +1,6 @@
 let allCountries = [];
+const searchInput = document.querySelector("#search");
+const regionFilter = document.querySelector(".region-filter");
 
 document.addEventListener("DOMContentLoaded", main);
 
@@ -8,16 +10,16 @@ async function main() {
     allCountries.sort((a, b) =>
         a.name.common.localeCompare(b.name.common)
     );
-    
-    renderCountries(allCountries);
+
+    searchInput.value = localStorage.getItem("searchValue") || "";
+    regionFilter.value = localStorage.getItem("selectedRegion") || "";
+
+    handleFilters()
     
     setFilters();
 }
 
 function setFilters() {
-    const searchInput = document.querySelector("#search");
-    const regionFilter = document.querySelector(".region-filter");
-
     searchInput.addEventListener("input", handleFilters);
     regionFilter.addEventListener("change", handleFilters);
 }
@@ -26,12 +28,15 @@ function handleFilters() {
     const searchValue = document.querySelector("#search").value.toLowerCase();
     const selectedRegion = document.querySelector(".region-filter").value;
 
-    resultCountries = allCountries.filter(country => {
+    filteredCountries = allCountries.filter(country => {
         const matchesName = country.name.common.toLowerCase().includes(searchValue);
         const matchesRegion = selectedRegion ? country.region === selectedRegion : true;
 
         return matchesName && matchesRegion;
     });
 
-    renderCountries(resultCountries);
+    localStorage.setItem("searchValue", searchValue);
+    localStorage.setItem("selectedRegion", selectedRegion);
+
+    renderCountries(filteredCountries);
 }
