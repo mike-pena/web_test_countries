@@ -25,7 +25,7 @@ function setFilters() {
 }
 
 function handleFilters() {
-    const searchValue = document.querySelector("#search").value.toLowerCase();
+    const searchValue = document.querySelector("#search").value.trim().toLowerCase();
     const selectedRegion = document.querySelector(".region-filter").value;
 
     filteredCountries = allCountries.filter(country => {
