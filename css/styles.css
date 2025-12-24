@@ -159,8 +159,9 @@ p {
   background-color: var(--element-color);
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .card__flag-wrapper {
@@ -175,8 +176,6 @@ p {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .card__info {
