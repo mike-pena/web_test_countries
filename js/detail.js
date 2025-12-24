@@ -21,38 +21,38 @@ function setBackBtn() {
 }
 
 function renderCountryDetails(country) {
-  const container = document.querySelector(".country-details");
+  const container = document.querySelector(".country-detail");
 
   const currencies = country.currencies ? Object.values(country.currencies).map(c => c.name).join(", ") : "N/A";
   const languages = country.languages ? Object.values(country.languages).join(", ") : "N/A";
   const nativeName = Object.values(country.name.nativeName)[0].common || country.common;
 
   container.innerHTML = `
-      <div class="flag-wrapper">
-        <img class="details__flag" src="${country.flags.svg}" alt="${country.flags.alt}" />
+      <div class="country-detail__flag">
+        <img class="country-detail__flag-image" src="${country.flags.svg}" alt="${country.flags.alt}" />
       </div>
         
-      <div class="details__text">
-        <h2 class="details__country-name">${country.name.common}</h2>
+      <div class="country-detail__content">
+        <h2 class="country-detail__name">${country.name.common}</h2>
         
-        <div class="details_country-info_container">
-          <div class="country-info_column">
-            <p><strong>Native Name:</strong> ${nativeName}</p>
-            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-            <p><strong>Region:</strong> ${country.region}</p>
-            <p><strong>Sub Region:</strong> ${country.subregion || "N/A"}</p>
-            <p><strong>Capital:</strong> ${country.capital?.[0] || "N/A"}</p>
+        <div class="country-detail__info">
+          <div class="country-detail__column">
+            <p class="country-detail__item"><strong>Native Name:</strong> ${nativeName}</p>
+            <p class="country-detail__item"><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+            <p class="country-detail__item"><strong>Region:</strong> ${country.region}</p>
+            <p class="country-detail__item"><strong>Sub Region:</strong> ${country.subregion || "N/A"}</p>
+            <p class="country-detail__item"><strong>Capital:</strong> ${country.capital?.[0] || "N/A"}</p>
           </div>
-          <div class="country-info_column">
-            <p><strong>Top Level Domain:</strong> ${country.tld[0]}</p>
-            <p><strong>Currencies:</strong> ${currencies}</p>
-            <p><strong>Languages:</strong> ${languages}</p>
+          <div class="country-detail__column">
+            <p class="country-detail__item"><strong>Top Level Domain:</strong> ${country.tld[0]}</p>
+            <p class="country-detail__item"><strong>Currencies:</strong> ${currencies}</p>
+            <p class="country-detail__item"><strong>Languages:</strong> ${languages}</p>
           </div>
         </div>
         
-        <div class="borders">
-          <p><strong>Border Countries:</strong><p>
-          <div class="borders-container"></div>
+        <div class="country-detail__borders">
+          <p class="country-detail__borders-label"><strong>Border Countries:</strong><p>
+          <div class="country-detail__borders-container"></div>
         </div>
       </div>
     `;
@@ -61,7 +61,7 @@ function renderCountryDetails(country) {
 }
 
 async function renderBorders(borders) {
-  const container = document.querySelector(".borders-container");
+  const container = document.querySelector(".country-detail__borders-container");
 
   if (!borders) {
     container.innerHTML = `

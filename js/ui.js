@@ -1,5 +1,5 @@
 function renderCountries(countries) {
-  const container = document.querySelector(".countries-container");
+  const container = document.querySelector(".countries__container");
 
   container.innerHTML = "";
 
@@ -32,14 +32,14 @@ function generateCard(country) {
 
   card.innerHTML = `
         <div class="card__flag-wrapper">
-            <img class="card__flag" src="${flagSrc}" alt="${alt}" />
+            <img class="card__flag-image" src="${flagSrc}" alt="${alt}" />
         </div>
-        <div class="card__info">
+        <div class="card__content">
             <h3 class="card__title">${country.name.common}</h3>
             <div class="card__details">
-                <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-                <p><strong>Region:</strong> ${country.region}</p>
-                <p><strong>Capital:</strong> ${
+                <p class="card__detail"><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+                <p class="card__detail"><strong>Region:</strong> ${country.region}</p>
+                <p class="card__detail"><strong>Capital:</strong> ${
                   country.capital?.[0] || "N/A"
                 }</p>
             </div>

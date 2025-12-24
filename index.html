@@ -15,26 +15,26 @@
 <body>
     <div class="page">
         <header class="header">
-            <div class="header-wrapper">
+            <div class="header__wrapper">
                 <a href="index.html" class="header__home-link">
                     <h1 class="header__title">Where in the world?</h1>
                 </a>
                 <button class="theme-toggle">
                     <i class="fa-regular fa-moon theme-toggle__icon"></i>
-                    <span>Dark Mode</span>
+                    <span class="theme-toggle__text">Dark Mode</span>
                 </button>
             </div>
         </header>
 
-        <main class="content">
-            <section class="controls">
+        <main class="content content-home">
+            <section class="controls controls-home">
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass search__icon"></i>
                     <input class="search__input" type="text" id="search" placeholder="Search for a country..." name="search">
                 </div>
                 
-                <div class="select-wrapper">
-                    <select class="region-filter">
+                <div class="select">
+                    <select class="select__input region-filter">
                         <option value="" selected>Filter by Region</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">America</option>
@@ -42,12 +42,12 @@
                         <option value="Europe">Europe</option>
                         <option value="Oceania">Oceania</option>
                     </select>
-                    <i class="fa-solid fa-angle-down select__arrow"></i>
+                    <i class="fa-solid fa-angle-down select__icon"></i>
                 </div>
             </section>
 
             <section class="countries">
-                <ul class="countries-container"></ul>
+                <ul class="countries__container"></ul>
             </section>
         </main>
     </div>
