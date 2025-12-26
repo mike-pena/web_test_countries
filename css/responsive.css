@@ -161,6 +161,7 @@
 
   .country-detail__borders {
     flex-direction: column;
+    gap: 22px
   }
 
   .country-detail__borders-label {

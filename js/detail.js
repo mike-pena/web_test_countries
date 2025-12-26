@@ -23,13 +23,15 @@ function setBackBtn() {
 function renderCountryDetails(country) {
   const container = document.querySelector(".country-detail");
 
+  console.log(country);
+
   const currencies = country.currencies ? Object.values(country.currencies).map(c => c.name).join(", ") : "N/A";
   const languages = country.languages ? Object.values(country.languages).join(", ") : "N/A";
-  const nativeName = Object.values(country.name.nativeName)[0].common || country.common;
+  const nativeName = country.name.nativeName ? Object.values(country.name.nativeName)[0].common : country.name.common;
 
   container.innerHTML = `
       <div class="country-detail__flag">
-        <img class="country-detail__flag-image" src="${country.flags.svg}" alt="${country.flags.alt}" />
+        <img class="country-detail__flag-image" src="${country.flags.svg}" alt="${country.flags.alt || `Flag of ${country.name.common}`}" />
       </div>
         
       <div class="country-detail__content">
@@ -44,14 +46,14 @@ function renderCountryDetails(country) {
             <p class="country-detail__item"><strong>Capital:</strong> ${country.capital?.[0] || "N/A"}</p>
           </div>
           <div class="country-detail__column">
-            <p class="country-detail__item"><strong>Top Level Domain:</strong> ${country.tld[0]}</p>
+            <p class="country-detail__item"><strong>Top Level Domain:</strong> ${country.tld?.[0] || "N/A"}</p>
             <p class="country-detail__item"><strong>Currencies:</strong> ${currencies}</p>
             <p class="country-detail__item"><strong>Languages:</strong> ${languages}</p>
           </div>
         </div>
         
         <div class="country-detail__borders">
-          <p class="country-detail__borders-label"><strong>Border Countries:</strong><p>
+          <p class="country-detail__borders-label"><strong>Border Countries:</strong></p>
           <div class="country-detail__borders-container"></div>
         </div>
       </div>

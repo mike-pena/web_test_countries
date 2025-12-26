@@ -62,7 +62,7 @@
 
 .country-detail__borders {
   display: flex;
-  gap: 8px;
+  gap: 18px;
   white-space: nowrap;
   align-items: start;
 }
