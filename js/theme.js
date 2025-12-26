@@ -2,12 +2,7 @@ const toggleBtn = document.querySelector(".theme-toggle");
 const page = document.querySelector(".page");
 const icon = document.querySelector(".theme-toggle__icon");
 
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme) {
-    page.setAttribute("theme", savedTheme);
-    changeIcon(savedTheme);
-}
+initTheme();
 
 toggleBtn.addEventListener("click", () => {
   const currentTheme = page.getAttribute("theme");
@@ -17,6 +12,12 @@ toggleBtn.addEventListener("click", () => {
   changeIcon(nextTheme);
   localStorage.setItem("theme", nextTheme);
 });
+
+function initTheme() {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  page.setAttribute("theme", savedTheme);
+  changeIcon(savedTheme);
+}
 
 function changeIcon(theme) {
   if (theme === "dark") {
