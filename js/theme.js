@@ -4,6 +4,10 @@ const icon = document.querySelector(".theme-toggle__icon");
 
 initTheme();
 
+window.addEventListener("pageshow", () => {
+  initTheme();
+});
+
 toggleBtn.addEventListener("click", () => {
   const currentTheme = page.getAttribute("theme");
   const nextTheme = currentTheme === "dark" ? "light" : "dark";
